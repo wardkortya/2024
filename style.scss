@@ -1,0 +1,364 @@
+$primary-color: #0066cc;
+$secondary-color: #004d99;
+$light-bg: #f4f4f9;
+$dark-bg: #f9f9f9;
+$text-color: #333;
+$hover-color: #005bb5;
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: $light-bg;
+    color: $text-color;
+}
+
+header {
+    background: $primary-color;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: $secondary-color;
+    padding: 0.75rem 0;
+
+    a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1.5rem;
+        font-weight: bold;
+
+        &:hover {
+            background: $hover-color;
+            border-radius: 5px;
+        }
+    }
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: url(C:\Users\milan\OneDrive\Documents\New folder\projects\team project\large.png) no-repeat center center/cover;
+    color: #fff;
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+.search {
+    text-align: center;
+    padding: 2rem;
+    background: $dark-bg;
+
+    h2 {
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+    }
+
+    form {
+        display: grid;
+        gap: 1rem;
+        max-width: 500px;
+        margin: 0 auto;
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+
+            label {
+                margin-bottom: 0.5rem;
+                font-weight: bold;
+            }
+
+            input, textarea {
+                padding: 0.75rem;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 1rem;
+            }
+        }
+
+        button {
+            padding: 0.75rem;
+            font-size: 1rem;
+            background: $primary-color;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background: $secondary-color;
+            }
+        }
+    }
+
+    .note {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #555;
+    }
+}
+
+.content {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+}
+
+.destinations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+
+    .destination-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        h3 {
+            margin: 1rem 0 0.5rem;
+            font-size: 1.2rem;
+            color: $primary-color;
+        }
+
+        p {
+            margin: 0 1rem 1.5rem;
+            font-size: 1rem;
+            color: $text-color;
+        }
+    }
+}
+
+.contact-form {
+    padding: 2rem;
+    background: $dark-bg;
+    display: flex;
+    justify-content: center;
+
+    form {
+        display: grid;
+        gap: 1rem;
+        max-width: 500px;
+        width: 100%;
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+
+            label {
+                margin-bottom: 0.5rem;
+                font-weight: bold;
+            }
+
+            input, textarea {
+                padding: 0.75rem;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 1rem;
+            }
+        }
+
+        button {
+            padding: 0.75rem;
+            font-size: 1rem;
+            background: $primary-color;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background: $secondary-color;
+            }
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: $secondary-color;
+    color: white;
+    margin-top: 2rem;
+}
+
+.destinations {
+    .destination-card {
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .search {
+        padding: 1.5rem;
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        form {
+            max-width: 100%;
+            padding: 0 1rem;
+
+            button {
+                padding: 0.5rem;
+            }
+        }
+
+        .note {
+            font-size: 0.8rem;
+        }
+    }
+
+    .destinations {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+        .destination-card {
+            img {
+                height: 120px;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .nav a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .search {
+        padding: 1rem;
+
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        form {
+            gap: 0.75rem;
+
+            .form-group {
+                label {
+                    font-size: 0.9rem;
+                }
+
+                input, textarea {
+                    font-size: 0.9rem;
+                }
+            }
+
+            button {
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        .note {
+            font-size: 0.7rem;
+        }
+    }
+
+    .destinations {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
+        .destination-card {
+            img {
+                height: 100px;
+            }
+
+            h3 {
+                font-size: 0.9rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .contact-form {
+        padding: 1rem;
+
+        form {
+            gap: 0.75rem;
+
+            .form-group {
+                label {
+                    font-size: 0.9rem;
+                }
+
+                input, textarea {
+                    font-size: 0.9rem;
+                }
+            }
+
+            button {
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+  

@@ -1,0 +1,298 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  header {
+    background: #0066cc;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    background: #004d99;
+    padding: 0.75rem 0;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+  }
+  nav a:hover {
+    background: #005bb5;
+    border-radius: 5px;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: url() no-repeat center center/cover;
+    color: white;
+  }
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  .search {
+    text-align: center;
+    padding: 2rem;
+    background: #f9f9f9;
+  }
+  .search h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+  .search form {
+    display: grid;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .search form .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  .search form .form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  .search form .form-group input, .search form .form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  .search form button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .search form button:hover {
+    background: #004d99;
+  }
+  .search .note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .content {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  .destinations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  .destinations .destination-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .destinations .destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  .destinations .destination-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  .destinations .destination-card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.2rem;
+    color: #0066cc;
+  }
+  .destinations .destination-card p {
+    margin: 0 1rem 1.5rem;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .contact-form {
+    padding: 2rem;
+    background: #f9f9f9;
+    display: flex;
+    justify-content: center;
+  }
+  .contact-form form {
+    display: grid;
+    gap: 1rem;
+    max-width: 500px;
+    width: 100%;
+  }
+  .contact-form form .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  .contact-form form .form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  .contact-form form .form-group input, .contact-form form .form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  .contact-form form button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .contact-form form button:hover {
+    background: #004d99;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: #004d99;
+    color: white;
+    margin-top: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .hero h2 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .search {
+      padding: 1.5rem;
+    }
+    .search h2 {
+      font-size: 1.5rem;
+    }
+    .search form {
+      max-width: 100%;
+      padding: 0 1rem;
+    }
+    .search form button {
+      padding: 0.5rem;
+    }
+    .search .note {
+      font-size: 0.8rem;
+    }
+  
+    .destinations {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .destinations .destination-card img {
+      height: 120px;
+    }
+    .destinations .destination-card h3 {
+      font-size: 1rem;
+    }
+    .destinations .destination-card p {
+      font-size: 0.9rem;
+    }
+  }
+  @media (max-width: 480px) {
+    .nav a {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  
+    .hero h2 {
+      font-size: 1.5rem;
+    }
+  
+    .hero p {
+      font-size: 0.9rem;
+    }
+  
+    .search {
+      padding: 1rem;
+    }
+    .search h2 {
+      font-size: 1.2rem;
+    }
+    .search form {
+      gap: 0.75rem;
+    }
+    .search form .form-group label {
+      font-size: 0.9rem;
+    }
+    .search form .form-group input, .search form .form-group textarea {
+      font-size: 0.9rem;
+    }
+    .search form button {
+      padding: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .search .note {
+      font-size: 0.7rem;
+    }
+  
+    .destinations {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    .destinations .destination-card img {
+      height: 100px;
+    }
+    .destinations .destination-card h3 {
+      font-size: 0.9rem;
+    }
+    .destinations .destination-card p {
+      font-size: 0.8rem;
+    }
+  
+    .contact-form {
+      padding: 1rem;
+    }
+    .contact-form form {
+      gap: 0.75rem;
+    }
+    .contact-form form .form-group label {
+      font-size: 0.9rem;
+    }
+    .contact-form form .form-group input, .contact-form form .form-group textarea {
+      font-size: 0.9rem;
+    }
+    .contact-form form button {
+      padding: 0.5rem;
+      font-size: 0.9rem;
+    }
+  }
+  
